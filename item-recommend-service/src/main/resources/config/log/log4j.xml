@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+                     threshold="null" debug="null">
+    <appender name="CONSOLE"
+              class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[item-recommend]%d %-5p [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="fileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <!-- <param name="Threshold" value="INFO" /> -->
+        <param name="File" value="/data/applogs/item-recommend/app.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[item-recommend]%d %-5p  [%c %L] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <logger name="com.content" additivity="false">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="com.ibatis" additivity="false">
+        <level value="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="org.mybatis.spring">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="java.sql">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="org.springframework.jms">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.activemq">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="org.apache.struts2">
+        <level value="ERROR"/>
+    </logger>
+
+
+    <logger name="com.content.train" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="fileAppender" />
+    </logger>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</log4j:configuration>

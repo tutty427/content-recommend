@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+    <classPathEntry location="/Users/shawxy/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar" />
+    <context id="context1" >
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/poi_recommend" userId="root" password="warpten" />
+
+
+        <javaModelGenerator targetPackage="com.content.train.dto.train" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="config.sqlmapper.train"  targetProject="src/main/resources" >
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.content.train.dto.mapper.train" targetProject="src/main/java" type="XMLMAPPER" >
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+
+        <!--<table schema="" tableName="3rd_baidu_api_joke" domainObjectName="BaiduJoke" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <!--<table schema="" tableName="3rd_chanyouji" domainObjectName="ChanYouJi" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <!--<table schema="" tableName="3rd_miaopai_video" domainObjectName="MiaoPaiVideo" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <!--<table schema="" tableName="3rd_smzdm" domainObjectName="SmZdm" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <!--<table schema="" tableName="yxtk_user_behavior" domainObjectName="UserBehavior" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <!--<table schema="" tableName="content_user_count" domainObjectName="ContentUserCount" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <table schema="" tableName="item_simi_score" domainObjectName="ItemSimiScore" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+
+
+
+    </context>
+</generatorConfiguration>
