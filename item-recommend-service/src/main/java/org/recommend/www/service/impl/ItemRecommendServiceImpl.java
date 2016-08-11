@@ -11,7 +11,6 @@ import org.recommend.www.model.SimilarItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.Resource;
 import java.util.List;
 import java.util.Set;
 
