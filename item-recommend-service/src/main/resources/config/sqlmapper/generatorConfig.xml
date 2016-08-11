@@ -6,15 +6,15 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/poi_recommend" userId="root" password="warpten" />
 
 
-        <javaModelGenerator targetPackage="com.content.train.dto.train" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="org.recommend.www.dto" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="config.sqlmapper.train"  targetProject="src/main/resources" >
+        <sqlMapGenerator targetPackage="config.sqlmap.recommend"  targetProject="src/main/resources" >
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.content.train.dto.mapper.train" targetProject="src/main/java" type="XMLMAPPER" >
+        <javaClientGenerator targetPackage="org.recommend.www.mapper.db.recommend" targetProject="src/main/java" type="XMLMAPPER" >
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
@@ -44,6 +44,10 @@
         <!--</table>-->
 
         <table schema="" tableName="item_simi_score" domainObjectName="ItemSimiScore" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+
+        <table schema="" tableName="title_simi_score" domainObjectName="TitleSimiScore" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
 
