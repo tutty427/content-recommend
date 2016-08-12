@@ -16,6 +16,9 @@ import java.util.Set;
 
 /**
  * Created by shawxy on 8/9/16.
+ * 1. 当都推不出的时候  是否加入随即模式
+ * 2. 代码优化重构
+ *
  */
 public class ItemRecommendServiceImpl implements ItemRecommendService {
 
